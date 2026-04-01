@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 14-Feb</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ---------------- VIDEO INICIO ---------------- */
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.15);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ---------------- BOTÓN INICIAR CON IMAGEN ---------------- */
+    #start-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1;
+    }
+
+    #start-btn img {
+      width: 220px; /* ajusta al tamaño de tu imagen */
+      height: auto;
+      display: block;
+      transition: transform 0.15s ease;
+    }
+
+    #start-btn img:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎬 Video de fondo inicial -->
+  <video id="background-video" autoplay loop muted playsinline>
+    <source src="assets/video/inicio.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay suave -->
+  <div id="video-overlay"></div>
+
+  <!-- 🖥 Pantalla principal -->
+  <div id="app">
+    <button id="start-btn">
+      <img src="assets/images/iniciar.png" alt="Iniciar">
+    </button>
+  </div>
+
+  <!-- 🎬 Capa de transición -->
+  <div id="transition-layer"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
