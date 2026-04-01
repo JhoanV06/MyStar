@@ -1,0 +1,147 @@
+/* -------------------- GLOBAL -------------------- */
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: black;
+color: white;
+overflow: hidden;
+}
+
+/* -------------------- OCULTAR VOLUMEN -------------------- */
+#global-ui {
+display: none;
+}
+
+/* -------------------- PANTALLA PRINCIPAL -------------------- */
+#app {
+position: fixed;
+inset: 0;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+text-align: center;
+padding-top: 200px; /* 🔥 botón un poquito más abajo */
+z-index: 1;
+}
+
+/* -------------------- BOTÓN INICIAR -------------------- */
+#start-btn {
+padding: 0; / quitamos padding porque será una imagen */
+border: none;
+background: none;
+cursor: pointer;
+transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#start-btn img {
+width: 250px; /* ajusta según tu imagen */
+height: auto;
+border-radius: 18px;
+box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#start-btn:active img {
+transform: scale(0.95);
+box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* -------------------- CAPA DE TRANSICIÓN -------------------- */
+#transition-layer {
+position: fixed;
+inset: 0;
+background: black;
+opacity: 0;
+pointer-events: none;
+z-index: 9999;
+transition: opacity 1.5s ease;
+}
+
+#transition-layer.active {
+opacity: 0.85;
+}
+
+/* -------------------- ELECCIÓN DE MODOS -------------------- */
+.modos-container {
+position: fixed;
+inset: 0;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+padding-top: 10px;
+text-align: center;
+}
+
+.modos-container h1 {
+font-size: 2.2rem;
+margin-bottom: 25px;
+}
+
+/* -------------------- GRID -------------------- */
+.modos-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+max-width: 500px;
+width: 90%;
+margin: 0 auto;
+}
+
+/* -------------------- CONTENEDOR -------------------- */
+.modo-wrapper {
+text-align: center;
+}
+
+/* TÍTULO */
+.modo-wrapper h2 {
+margin-bottom: 8px;
+font-size: 18px;
+font-weight: bold;
+color: white;
+}
+
+/* -------------------- TARJETAS -------------------- */
+.modo-card {
+background: #222;
+height: 130px;
+border-radius: 12px;
+cursor: pointer;
+overflow: hidden;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modo-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+border-radius: 12px;
+}
+
+.modo-card:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.modo-card:active {
+transform: scale(1.02);
+box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* -------------------- ESTADOS BLOQUEADOS -------------------- */
+.modo-card.locked {
+filter: brightness(50%);
+cursor: not-allowed;
+}
+
+.modo-card.super-locked {
+filter: brightness(20%);
+cursor: not-allowed;
+}
+
+.modo-card.black-locked {
+background: black;
+cursor: not-allowed;
+}
