@@ -228,7 +228,7 @@ function iniciarDialogo() {
     { personaje: "link", texto: "quieres que sea perfecto verdad?" },
     { personaje: "yo", texto: "Si, quiero que lo sea, es que ella merece lo mejor de lo mejor y me da temor no darle algo muy bueno." },
     { personaje: "link", texto: "No sé mucho de regalos, pero algo si se, y es que a veces no me gustaría recibir tesoros, dinero y esas cosas, a veces me gustaría algo simbólico" },
-    { personaje: "link", texto: "Algo que me hiciera sentir que alguien me quiere, que me conoce"}
+    { personaje: "link", texto: "Algo que me hiciera sentir que alguien me quiere, que me conoce" },
     { personaje: "link", texto: "puede no ser algo grande, pero si a mí me gusta me haría feliz. Podrías darle algo así a ella. Que cosas le gusta?" },
     { personaje: "yo", texto: "Le gustan los koalas, los gatitos." },
     { personaje: "link", texto: "Esos suenan difíciles de conseguir." },
@@ -272,7 +272,7 @@ function iniciarDialogo() {
 
     { id: 500, personaje: "link", texto: "Perfecto, me gusta esa forma de ser, tienes un lindo corazón. Vayamos a verlo." },
 
-    { id: 600, personaje: "link", texto: "Oh hola otra vez, ya estamos aquí." }
+    { id: 600, personaje: "link", texto: "Oh hola otra vez, ya estamos aquí." },
     { personaje: "yo", texto: "Estamos? Cómo que... Estamos...?" },
     { personaje: "link", texto: "AH EH me refiero a mi y a navi hehe" },
     { personaje: "navi", texto: "listen (yo no quería venir)" },
